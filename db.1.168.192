@@ -1,0 +1,19 @@
+;
+; BIND zone file for 192.168.1.xxx
+;
+
+$TTL    3H
+@       IN      SOA     @               root.home.lan. (
+                        2017061201      ; serial
+                        8H              ; refresh
+                        2H              ; retry
+                        4W              ; expire
+                        1D )            ; minimum
+;
+@               NS      ns.home.lan.    ; Nameserver address
+
+100             PTR     server.home.lan.
+100             PTR     ns.home.lan.
+100             PTR     mail.home.lan.
+101             PTR     virtual.home.lan.
+1               PTR     router.home.lan.
